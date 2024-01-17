@@ -6,4 +6,32 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  position: absolute;
+}
+
+.React-Alert-Go__alert-box--top-right {
+  top: 1em;
+  right: 1em;
+}
+.React-Alert-Go__alert-box--top-left {
+  top: 1em;
+  left: 1em;
+}
+.React-Alert-Go__alert-box--top-center {
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.React-Alert-Go__alert-box--bottom-right {
+  bottom: 1em;
+  right: 1em;
+}
+.React-Alert-Go__alert-box--bottom-left {
+  bottom: 1em;
+  left: 1em;
+}
+.React-Alert-Go__alert-box--bottom-center {
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
 }

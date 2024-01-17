@@ -1,12 +1,21 @@
 {
   "name": "react-alert-go",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a beautiful react alert component",
   "scripts": {
     "test": "jest",
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "prettier": "prettier --write src"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
   },
   "repository": {
     "type": "git",
@@ -42,6 +51,14 @@
     "@storybook/react-webpack5": "^7.6.8",
     "@storybook/test": "^7.6.8",
     "@types/react": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.9.5",

@@ -1,16 +1,17 @@
-import Alert from '../component';
+import { Alert } from '../component';
 
 export default {
   title: 'Example/Alert',
   component: Alert,
   parameters: {
-    layout: 'centered'
+    layout: 'fullscreen'
   },
   tags: ['autodocs']
 };
 
 export const SimpleAlert = {
   args: {
-    message: 'Success alert'
+    message: 'Success message',
+    position: 'bottom'
   }
 };
