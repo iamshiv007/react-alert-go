@@ -12,6 +12,7 @@ export default {
 export const SimpleAlert = {
   args: {
     message: 'Success message',
-    position: 'bottom'
+    position: 'bottom',
+    type: 'warning'
   }
 };

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Default, Position } from '../utils';
 import '../style/Alert.css';
-import CheckMark from '../icons/CheckMark';
-
-interface AlertProps {
-  message: string;
-  position: Position;
-}
+import { AlertProps } from '../@types/Type';
+import ErrorIcon from '../icons/ErrorIcon';
+import WarningIcon from '../icons/WarningIcon';
+import SuccessIcon from '../icons/SuccessIcon';
 
 const positions = [
   'top-right',
@@ -17,7 +15,11 @@ const positions = [
   'bottom-center'
 ];
 
-export const Alert = ({ message, position }: AlertProps) => {
+export const Alert = ({
+  message,
+  position = 'top-right',
+  type = 'success'
+}: AlertProps) => {
   return (
     <div
       className={`${Default.CSS_NAMESPACE}__alert-box ${
@@ -44,7 +46,9 @@ export const Alert = ({ message, position }: AlertProps) => {
         `${Default.CSS_NAMESPACE}__alert-box--top-right`
       }`}
     >
-      <CheckMark />
+      {type === 'success' && <SuccessIcon />}
+      {type === 'error' && <ErrorIcon />}
+      {type === 'warning' && <WarningIcon />}
       {message}
     </div>
   );
