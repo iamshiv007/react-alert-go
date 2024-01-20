@@ -1,8 +1,8 @@
-import { Alert } from '../component';
+import Home from '../component/Home';
 
 export default {
-  title: 'Example/Alert',
-  component: Alert,
+  title: 'Example/Home',
+  component: Home,
   parameters: {
     layout: 'fullscreen'
   },
@@ -10,9 +10,5 @@ export default {
 };
 
 export const SimpleAlert = {
-  args: {
-    message: 'Success message',
-    position: 'bottom',
-    type: 'warning'
-  }
+  args: {}
 };

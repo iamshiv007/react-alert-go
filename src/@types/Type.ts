@@ -1,5 +1,5 @@
-type AlertType = 'success' | 'error' | 'warning';
-type Position =
+export type AlertType = 'success' | 'error' | 'warning';
+export type Position =
   | 'top-right'
   | 'top-left'
   | 'top-center'

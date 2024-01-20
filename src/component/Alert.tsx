@@ -1,5 +1,5 @@
 import React from 'react';
-import { Default, Position } from '../utils';
+import { Default } from '../utils';
 import '../style/Alert.css';
 import { AlertProps } from '../@types/Type';
 import ErrorIcon from '../icons/ErrorIcon';

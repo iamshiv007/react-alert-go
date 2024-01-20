@@ -1,1 +1,2 @@
-export { Alert } from './Alert';
+export { AlertGoContainer } from './AlertGoContainer';
+export { alertContext, AlertContextProvider } from './AlertContext';

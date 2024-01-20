@@ -1,1 +1,5 @@
-export { Alert } from './component';
+export {
+  AlertGoContainer,
+  alertContext,
+  AlertContextProvider
+} from './component';
