@@ -1,6 +1,6 @@
 {
   "name": "react-alert-go",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "a beautiful react alert component",
   "scripts": {
     "test": "jest",

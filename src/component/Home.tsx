@@ -1,13 +1,13 @@
 import React from 'react';
 import Test from './Test';
-import { AlertContextProvider } from './AlertContext';
+import { AlertGoContextProvider } from './AlertGoContext';
 
 const Home = () => {
   return (
     <div>
-      <AlertContextProvider>
+      <AlertGoContextProvider>
         <Test />
-      </AlertContextProvider>
+      </AlertGoContextProvider>
     </div>
   );
 };

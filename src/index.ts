@@ -1,5 +1,5 @@
 export {
   AlertGoContainer,
-  alertContext,
-  AlertContextProvider
+  alertGoContext,
+  AlertGoContextProvider
 } from './component';

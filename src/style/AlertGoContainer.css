@@ -1,0 +1,34 @@
+.React-Alert-Go__alert-go-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  gap: 10px;
+}
+
+.React-Alert-Go__alert-go-container--top-right {
+  top: 1em;
+  right: 1em;
+}
+.React-Alert-Go__alert-go-container--top-left {
+  top: 1em;
+  left: 1em;
+}
+.React-Alert-Go__alert-go-container--top-center {
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.React-Alert-Go__alert-go-container--bottom-right {
+  bottom: 1em;
+  right: 1em;
+}
+.React-Alert-Go__alert-go-container--bottom-left {
+  bottom: 1em;
+  left: 1em;
+}
+.React-Alert-Go__alert-go-container--bottom-center {
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
