@@ -8,18 +8,28 @@ const Test = () => {
 
   useEffect(() => {
     if (loggedIn) {
-      alertGo?.addAlert('Logged in Successfully', { type: 'success' });
+      alertGo?.addAlert('Logged in Successfully');
     } else {
       alertGo?.addAlert('Logged out Successfully', { type: 'error' });
     }
   }, [loggedIn]);
   return (
     <div>
-      <AlertGoContainer position="top-center" />
+      <AlertGoContainer />
       {loggedIn ? (
-        <button onClick={() => setloggedIn(false)}>Logout</button>
+        <button
+          style={{ fontSize: '24px', margin: '10px' }}
+          onClick={() => setloggedIn(false)}
+        >
+          Logout
+        </button>
       ) : (
-        <button onClick={() => setloggedIn(true)}>Login</button>
+        <button
+          style={{ fontSize: '24px', margin: '10px' }}
+          onClick={() => setloggedIn(true)}
+        >
+          Login
+        </button>
       )}
     </div>
   );

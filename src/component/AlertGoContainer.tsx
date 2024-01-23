@@ -8,7 +8,7 @@ import '../style/AlertGoContainer.css';
 interface Alert {
   id: number;
   message: string;
-  type: AlertType;
+  type?: AlertType;
 }
 
 const positions = [
@@ -21,10 +21,12 @@ const positions = [
 ];
 
 interface AlertGoContainerProps {
-  position: Position;
+  position?: Position;
 }
 
-export const AlertGoContainer = ({ position }: AlertGoContainerProps) => {
+export const AlertGoContainer = ({
+  position = 'top-right'
+}: AlertGoContainerProps) => {
   const context = useContext(alertGoContext);
 
   return (
@@ -50,11 +52,11 @@ export const AlertGoContainer = ({ position }: AlertGoContainerProps) => {
       }
     ${
       !positions.includes(position) &&
-      `${Default.CSS_NAMESPACE}__alert-box--top-right`
+      `${Default.CSS_NAMESPACE}__alert-go-container--top-right`
     }`}
     >
       {context?.alerts.map((alert: Alert, i: number) => {
-        return <Alert key={i} message={alert.message} type={alert.type} />;
+        return <Alert key={i} message={alert.message} type={alert?.type} />;
       })}
     </div>
   );

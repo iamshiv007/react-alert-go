@@ -5,24 +5,28 @@ import { ReactNode, createContext, useState } from 'react';
 interface Alerts {
   id: number;
   message: string;
-  type: AlertType;
+  type?: AlertType;
 }
 
 interface Properties {
-  type: AlertType;
+  type?: AlertType;
 }
 
 export type AlertContextType = {
   alerts: Alerts[];
-  addAlert: (message: string, properties: Properties) => void;
+  addAlert: (message: string, properties?: Properties) => void;
 };
 
 export const alertGoContext = createContext<AlertContextType | null>(null);
 
-export const AlertGoContextProvider = ({ children }: { children: ReactNode }) => {
+export const AlertGoContextProvider = ({
+  children
+}: {
+  children: ReactNode;
+}) => {
   const [alerts, setAlerts] = useState<Alerts[]>([]);
 
-  const addAlert = (message: string, properties: Properties) => {
+  const addAlert = (message: string, properties: Properties = {}) => {
     const Id = Math.random();
     setAlerts(prev => [...prev, { id: Id, message, ...properties }]);
     setTimeout(() => {

@@ -9,5 +9,5 @@ export type Position =
 
 export interface AlertProps {
   message: string;
-  type: AlertType;
+  type?: AlertType;
 }
