@@ -15,6 +15,7 @@ interface Properties {
 export type AlertContextType = {
   alerts: Alerts[];
   addAlert: (message: string, properties?: Properties) => void;
+  removeAlert: (id: number) => void;
 };
 
 export const alertGoContext = createContext<AlertContextType | null>(null);
@@ -31,7 +32,7 @@ export const AlertGoContextProvider = ({
     setAlerts(prev => [...prev, { id: Id, message, ...properties }]);
     setTimeout(() => {
       removeAlert(Id);
-    }, 3000);
+    }, 5000);
   };
 
   const removeAlert = (Id: number) => {
@@ -39,7 +40,7 @@ export const AlertGoContextProvider = ({
   };
 
   return (
-    <alertGoContext.Provider value={{ alerts, addAlert }}>
+    <alertGoContext.Provider value={{ alerts, addAlert, removeAlert }}>
       {children}
     </alertGoContext.Provider>
   );

@@ -56,7 +56,14 @@ export const AlertGoContainer = ({
     }`}
     >
       {context?.alerts.map((alert: Alert, i: number) => {
-        return <Alert key={i} message={alert.message} type={alert?.type} />;
+        return (
+          <Alert
+            key={i}
+            message={alert.message}
+            type={alert?.type}
+            id={alert.id}
+          />
+        );
       })}
     </div>
   );

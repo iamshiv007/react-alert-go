@@ -8,6 +8,7 @@ export type Position =
   | 'bottom-center';
 
 export interface AlertProps {
+  id: number;
   message: string;
   type?: AlertType;
 }

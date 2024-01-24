@@ -1,9 +1,22 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 .React-Alert-Go__alert-box {
-  border: 1px solid gray;
   border-radius: 10px;
   padding: 10px 20px;
   display: flex;
   align-items: center;
   gap: 20px;
   background-color: white;
+  box-shadow:
+    rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  position: relative;
+}
+
+.React-Alert-Go__alert-box-close-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+  cursor: pointer;
 }
