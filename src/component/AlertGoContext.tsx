@@ -21,18 +21,25 @@ export type AlertContextType = {
 export const alertGoContext = createContext<AlertContextType | null>(null);
 
 export const AlertGoContextProvider = ({
-  children
+  children,
+  autoClose
 }: {
   children: ReactNode;
+  autoClose?: boolean | number;
 }) => {
   const [alerts, setAlerts] = useState<Alerts[]>([]);
 
   const addAlert = (message: string, properties: Properties = {}) => {
     const Id = Math.random();
     setAlerts(prev => [...prev, { id: Id, message, ...properties }]);
+    let delay = 5000;
+    if (autoClose === false) return;
+    if (typeof autoClose === 'number') {
+      delay = autoClose;
+    }
     setTimeout(() => {
       removeAlert(Id);
-    }, 5000);
+    }, delay);
   };
 
   const removeAlert = (Id: number) => {
