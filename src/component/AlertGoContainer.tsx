@@ -55,10 +55,10 @@ export const AlertGoContainer = ({
       `${Default.CSS_NAMESPACE}__alert-go-container--top-right`
     }`}
     >
-      {context?.alerts.map((alert: Alert, i: number) => {
+      {context?.alerts.map((alert: Alert) => {
         return (
           <Alert
-            key={i}
+            key={alert.id}
             message={alert.message}
             type={alert?.type}
             id={alert.id}

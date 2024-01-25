@@ -1,6 +1,6 @@
 # react-alert-go
 
-![React Accordion](https://res.cloudinary.com/dqfrtazgi/image/upload/v1705943632/www_screencapture_com_2024-1-22_19_12_lkdr4w.gif)
+![React Accordion](https://res.cloudinary.com/dqfrtazgi/image/upload/v1706167442/10ad7908-08cd-4314-b555-fb7e50d049fd_ywgcfs.gif)
 
 ✨ react-alert-go is a beautiful way to show alerts on web applications.
 

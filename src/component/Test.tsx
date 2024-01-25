@@ -16,16 +16,28 @@ const Test = () => {
   return (
     <div>
       <AlertGoContainer />
+      <AlertGoContainer position="top-center" />
+      <AlertGoContainer position="top-left" />
       {loggedIn ? (
         <button
-          style={{ fontSize: '24px', margin: '10px' }}
+          style={{
+            fontSize: '24px',
+            margin: '10px',
+            position: 'absolute',
+            bottom: '10px'
+          }}
           onClick={() => setloggedIn(false)}
         >
           Logout
         </button>
       ) : (
         <button
-          style={{ fontSize: '24px', margin: '10px' }}
+          style={{
+            fontSize: '24px',
+            margin: '10px',
+            position: 'absolute',
+            bottom: '10px'
+          }}
           onClick={() => setloggedIn(true)}
         >
           Login
